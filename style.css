@@ -73,6 +73,13 @@ button {
     border-radius: 50px;
     font-size: 20px;
     box-shadow: 0 5px 10ox rgba(0, 0, 0, .3);
+    transition: all .3s;
+}
+
+button:hover,
+button:active {
+    background-color: var(--Soft-Magenta);
+    color: #fff;
 }
 
 .social-links {
@@ -81,6 +88,17 @@ button {
     justify-content: flex-end;
     margin-bottom: 1rem;
     margin-right: 1rem;
+}
+
+.social-links a:hover {
+    color: var(--Soft-Magenta);
+    border: 2px solid var(--Soft-Magenta)
+}
+
+li:active a {
+    fill: var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+    border: 2px solid var(--Soft-Magenta)
 }
 
 .social-links a {
