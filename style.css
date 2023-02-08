@@ -12,165 +12,109 @@
 }
 
 body {
-    height: 100vh;
     background-image: url(/images/bg-desktop.svg);
-    background-color: var(--Violet);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-
-}
-
-.container {
-    max-width: 1320px;
-    min-height: 100vh;
-    margin: 0 auto;
-}
-
-.wrapper {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 40px 0;
-    margin: 0 2rem;
-}
-
-.header img {
-    width: 206px;
-    padding-bottom: 20px;
-    margin: 11px 0;
-}
-
-.main {
-    display: flex;
-    align-items: center;
-    gap: 60px;
+    background-color: var(--Violet);
     color: #fff;
+    display: flex;
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
     font-family: 'Poppins', sans-serif;
 }
 
-.hero-text {
-    margin-right: 3rem;
+p {
+    margin-top: 1rem;
+    opacity: .8;
+    font-size: 1.2rem;
 }
 
-.hero-text h1 {
-    font-size: 2.4rem;
-    margin-bottom: 20px;
-    margin-right: 3.3rem;
+.container {
+    margin: auto 10px;
+    max-width: 100%;
+    width: 1200px;
 }
 
-.hero-text p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: 30px;
+.flex {
+    display: flex;
+    margin: 90px 0 50px;
 }
 
-.hero-text a {
-    text-decoration: none;
-    display: inline-block;
+.flex div {
+    align-self: center;
+}
+
+.flex div:first-child {
+    flex: .6;
+    margin-right: 20px;
+}
+
+.flex div:last-child {
+    flex: .4;
+    margin-left: 20px;
+}
+
+button {
     background-color: #fff;
-    padding: 13px 50px;
-    border-radius: 25px;
     color: var(--Violet);
-    box-shadow: 0 8px 17px -8px rgba(0, 0, 0, .8);
-    transition: all .3s ease;
+    border: none;
+    padding: 17px 80px;
+    margin-top: 1.5rem;
+    border-radius: 50px;
+    font-size: 20px;
+    box-shadow: 0 5px 10ox rgba(0, 0, 0, .3);
 }
 
-.hero-text a:hover {
-    background-color: var(--Soft-Magenta);
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.social-links a {
+    height: 50px;
+    width: 50px;
+    text-decoration: none;
+    border: 2px solid #fff;
     color: #fff;
-}
-
-.social {
-    text-align: right;
-}
-
-.social a i {
-    color: #fff;
-    font-size: 18px;
-    position: relative;
-    transition: all .3s;
-}
-
-.social a:not(:first-child) {
-    margin-left: 2rem;
-}
-
-.social a i::after {
-    content: '';
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    border: 2px solid;
     border-radius: 50%;
-    left: -15px;
-    bottom: -13px;
-    transition: all .3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
 }
 
-.social a:nth-child(2) {
-    margin-left: 2.4rem;
-}
-
-.social a:hover i {
-    color: var(--Soft-Magenta);
-}
-
-.social a i:hover::after {
-    color: var(--Soft-Magenta);
-}
-
-.hero-img {
-    min-width: 50%;
-}
-
-@media only screen and(max-width :1940px) {
-    /* .hero-img img {
-        width: 100%;
-    } */
-
-    .hero-text p {
-        line-height: 1.5;
-        margin-bottom: 19px;
-    }
-}
-
-@media only screen and (max-width :790px) {
-    .main {
+@media only screen and (max-width:768px) {
+    .flex {
         flex-direction: column;
+        margin: 50px 0;
+    }
+
+    .flex div:first-child {
+        flex: 1;
+        margin-right: 0;
+    }
+
+    .flex div:last-child {
+        flex: 1;
+        margin-left: 0;
         text-align: center;
     }
 
-    body {
-        height: 100vh;
-        background-image: url(/images/bg-mobile.svg);
-
+    .social-links {
+        justify-content: center;
+        margin-right: 0;
     }
-
-    .hero-img {
-        width: 95%;
-    }
-
-    .hero-text {
-        margin-right: .1rem;
-    }
-
-    .hero-text h1 {
-        font-size: 26px;
-    }
-
-    .social {
-        text-align: center;
-        margin-top: 45px;
-        padding-bottom: 20px;
-    }
-
-    .hero-text a {
-        padding: 10px 50px;
-
-    }
-
-
 }
